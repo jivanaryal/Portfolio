@@ -36,7 +36,8 @@ const Sidebar = () => {
   const { color, setColor } = useContext(ColorContext);
   const location = useLocation();
   return (
-    <div className="h-[60vh] flex justify-between flex-col lg:block sm:hidden">
+    <div className="hidden lg:block">
+    <div className="h-[60vh] flex justify-between flex-col lg:block ">
       <button
         onClick={() => {
           console.log(color);
@@ -64,6 +65,7 @@ const Sidebar = () => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };
