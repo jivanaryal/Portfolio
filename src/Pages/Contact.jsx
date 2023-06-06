@@ -70,7 +70,7 @@ const logos = [
   },
 ];
 const Contact = () => {
-  const { color, setColor } = useContext(ColorContext);
+  const { color } = useContext(ColorContext);
   return (
     <div className="mx-auto w-11/12 pb-10">
       <div className="flex justify-center gap-2 mt-20 text-6xl mb-10">
