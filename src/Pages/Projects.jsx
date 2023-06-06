@@ -28,45 +28,47 @@ const data = [
 const Projects = () => {
   return (
     <div className="w-full">
-      <div className="flex justify-center gap-2 mt-20 text-6xl">
-        <div className="">My</div>
-        <div className="text-green-700">Projects</div>
-      </div>
-
-      <div className="grid grid-cols-3 place-items-center pt-10">
-        {data.map((val, i) => {
-          return (
-            <div
-              key={i}
-              className="hover:scale-110 duration-700 delay-75 transition-all w-[22rem] shadow-2xl pt-2  border-2 ">
-              <div>
-                <img
-                  src={val.img}
-                  alt=""
-                  className="w-[22rem] rounded-t-lg p-2  h-64"
-                />
-              </div>
-              <div className="pl-2 pr-2  w-full ">
-                <div className="border-b-2 py-4 text-md line-clamp-5 h-36">{val.title}</div>
-                <div className="flex justify-between p-4 ">
-                  <div className=" capitalize text-lg">{val.author}</div>
-                  <Link to={val.job}><div className=" text-mainColor underline text-xl">View Project</div></Link> 
-                </div>
+    <div className="flex flex-col items-center mt-10 md:mt-20">
+      <h1 className="text-4xl md:text-6xl">
+        My <span className="text-green-700">Projects</span>
+      </h1>
+    </div>
+  
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pt-10">
+      {data.map((val, i) => {
+        return (
+          <div
+            key={i}
+            className="hover:scale-110 duration-700 delay-75 transition-all w-full md:w-[22rem] shadow-2xl pt-2 border-2">
+            <div>
+              <img
+                src={val.img}
+                alt=""
+                className="w-full md:w-[22rem] rounded-t-lg p-2 h-64"
+              />
+            </div>
+            <div className="pl-2 pr-2 w-full">
+              <div className="border-b-2 py-4 text-md line-clamp-5 h-36">{val.title}</div>
+              <div className="flex justify-between p-4">
+                <div className="capitalize text-lg">{val.author}</div>
+                <Link to={val.job}>
+                  <div className="text-mainColor underline text-xl">View Project</div>
+                </Link>
               </div>
             </div>
-          );
-        })}
-      </div>
-
-    <Link to="https://github.com/jivanaryal">  <div className="flex justify-center gap-2 mt-20 text-6xl underline pb-32">
+          </div>
+        );
+      })}
+    </div>
+  
+    <Link to="https://github.com/jivanaryal">
+      <div className="flex justify-center gap-2 mt-20 text-4xl md:text-6xl underline pb-32">
         <div className="">More</div>
         <div className="text-green-700">Projects</div>
       </div>
-      </Link>
-
-        
-      </div>
-    
+    </Link>
+  </div>
+  
   );
 };
 
