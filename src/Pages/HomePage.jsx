@@ -7,12 +7,12 @@ import Projects from "./Projects";
 const HomePage = () => {
   return (
     <>
-<div className="grid grid-cols-1 md:grid-cols-2 h-screen place-content-center">
+<div className="grid grid-cols-1 lg:grid-cols-2  place-content-center py-10">
   <div className="justify-center items-center flex">
     <img
       src={jivan}
       alt=""
-      className="h-96 w-full md:w-[25vw] rounded-lg shadow-xl"
+      className="h-96 w-full lg:w-[25vw] sm:w-[30vw] rounded-lg shadow-xl"
     />
   </div>
   <div className="text-xl">

@@ -78,7 +78,7 @@ const Contact = () => {
         <div className="text-green-700">Me</div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
   <div className="left">
     <div className="text-2xl md:text-4xl">Contact Me Here</div>
     <div className="py-4 md:py-10">
