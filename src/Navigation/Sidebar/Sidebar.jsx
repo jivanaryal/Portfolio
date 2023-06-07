@@ -40,10 +40,10 @@ const Sidebar = () => {
   
   return (
     <div className="relative">
-      <div><AiOutlineMenu className={`lg:hidden block text-3xl absolute top-2 right-[-4rem] `}  onClick={()=>{
+      {/* <div><AiOutlineMenu className={`lg:hidden block text-3xl absolute top-2 right-[-4rem] `}  onClick={()=>{
       console.log(show)
       setShow(!show);
-    }}/></div>
+    }}/></div> */}
      <button
         onClick={() => {
           console.log(color);
@@ -57,7 +57,7 @@ const Sidebar = () => {
     <div className={`  ${show===true?'block':'hidden'}`}>
     <div className="h-[70vh] flex justify-center  flex-col  ">
      
-      <div className="flex md:flex-col md:flex w-full justify-center items-center gap-5 fixed top-2 left-0 md:static md:left-auto md:right-auto">
+      <div className="flex md:flex-col md:flex w-full justify-center items-center gap-5 fixed top-2 left-6 md:static md:left-auto md:right-auto">
         {data.map((value, i) => {
           return (
             <div
