@@ -17,7 +17,7 @@ const Layout = () => {
         <div className="lg:col-span-10 mt-20 col-span-12 min-h-screen w-11/12 mx-auto">
           <Outlet />
         </div>
-        <div className={` h-screen fixed right-0 top-0 px-20 ${show===false?"shadow-xl":"shadow-none"}`}>
+        <div className={` h-screen fixed right-0 top-0 px-20 ${show===false?"shadow-none":"shadow-xl"}`}>
           <Sidebar />
         </div>
       </div>

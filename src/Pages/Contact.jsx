@@ -106,7 +106,7 @@ const Contact = () => {
     <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-8 md:mt-10 ml-4 md:ml-32">
       {logos.map((val, i) => {
         return (
-          <Link to={val.path}>
+          <Link to={val.path} key={i}>
             <div className={`border-2 rounded-full p-3 bg-white shadow-2xl border-transparent text-2xl ${color ? "bg-[#171a24]" : "bg-white"}`}>
               {val.logo}
             </div>
