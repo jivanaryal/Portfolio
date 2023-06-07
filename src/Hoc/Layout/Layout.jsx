@@ -14,10 +14,10 @@ const Layout = () => {
           color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"
         }`}
       >
-        <div className="lg:col-span-10 mt-20 col-span-11 min-h-screen w-11/12 mx-auto">
+        <div className="lg:col-span-10 mt-20 col-span-12 min-h-screen w-10/12 mx-auto" onClick={()=>setShow(false)}>
           <Outlet />
         </div>
-        <div className={`col-span-1 lg:col-span-2 h-screen fixed right-0 top-0 px-20 ${show===false?"shadow-none":"shadow-xl"}`}>
+        <div className={`h-screen fixed right-0 top-0 px-20 ${show===false?"shadow-none":"shadow-xl"}`}>
           <Sidebar />
         </div>
       </div>

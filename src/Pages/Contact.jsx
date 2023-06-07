@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   AiFillLinkedin,
   AiFillMobile,
@@ -9,7 +9,7 @@ import {
 import { FaFacebook, FaGithub, FaUserGraduate } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { ColorContext } from "../Hoc/Layout/Layout";
+
 const obj = [
   {
     course: "location",
@@ -70,7 +70,6 @@ const logos = [
   },
 ];
 const Contact = () => {
-  const { color } = useContext(ColorContext);
   return (
     <div className="mx-auto w-11/12 pb-10">
       <div className="flex justify-center gap-2 mt-20 text-6xl mb-10">
@@ -107,7 +106,7 @@ const Contact = () => {
       {logos.map((val, i) => {
         return (
           <Link to={val.path} key={i}>
-            <div className={`border-2 rounded-full p-3 bg-white shadow-2xl border-transparent text-2xl ${color ? "bg-[#171a24]" : "bg-white"}`}>
+            <div className={`border-2 rounded-full p-3  shadow-2xl border-transparent text-2xl `}>
               {val.logo}
             </div>
           </Link>

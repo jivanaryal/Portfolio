@@ -23,13 +23,13 @@ const HomePage = () => {
       <h1 className="text-4xl md:text-6xl font-bold text-blue-700">
         Web Developer
       </h1>
-      <p className="mt-8 text-lg">
+      <p className="mt-8 md:text-lg text-base">
         Welcome to my portfolio! I'm Jivan Aryal, a passionate web developer
         who enjoys building interactive and user-friendly websites. With a keen
         eye for design and a love for problem-solving, I strive to create
         memorable online experiences through my work.
       </p>
-      <p className="mt-4 text-lg">
+      <p className="mt-4 md:text-lg text-base">
         This portfolio showcases some of the projects I have worked on,
         demonstrating my skills and creativity. Feel free to explore and get in
         touch with me if you have any inquiries or collaboration opportunities.

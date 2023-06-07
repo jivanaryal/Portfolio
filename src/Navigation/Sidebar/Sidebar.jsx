@@ -38,6 +38,14 @@ const Sidebar = () => {
 
   console.log(color)
 
+  const handleClick = ()=>{
+      setShow(!show)
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Scroll smoothly instead of instantly
+      });
+  }
+
 
   
   return (
@@ -51,7 +59,7 @@ const Sidebar = () => {
           console.log(color);
           setColor(!color);
         }}
-        className={`border-2  fixed  top-2  left-2   rounded-full  p-2  ${
+        className={`border-2  fixed  top-1  left-1   rounded-full  p-2  ${
           color === true && "bg-[#454e56]"
         } border-transparent transition-all delay-100 duration-700`}>
         <VscColorMode className="text-2xl " />
@@ -70,7 +78,7 @@ const Sidebar = () => {
               }`}>
               <Link to={value.path}>
                 {" "}
-                <div>{value.images}</div>
+                <div onClick={()=>handleClick()}>{value.images}</div>
               </Link>
             </div>
           );

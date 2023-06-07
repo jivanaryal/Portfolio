@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ColorContext } from "../Hoc/Layout/Layout";
 
 const data = [
   {
@@ -51,6 +52,7 @@ const obj = [
 ];
 
 const About = () => {
+  const { color } = useContext(ColorContext);
   return (
     <div className="w-11/12 mx-auto ">
     <div className="flex justify-center gap-2 mt-10 md:mt-20 text-4xl md:text-6xl">
@@ -61,12 +63,11 @@ const About = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-10">
       <div className="flex flex-col gap-3">
         <div className="text-2xl md:text-3xl capitalize">Information About Me</div>
-        <div className="describtion">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          itaque aut magni deserunt illo saepe numquam blanditiis corrupti eum
-          beatae, totam libero inventore non iusto atque laudantium voluptatum
-          expedita quaerat perspiciatis vel architecto illum unde vero?
-          Veritatis quasi labore optio nostrum esse voluptatibus libero?
+        <div className="md:text-lg text-base text-start">
+        I'm Jivan Aryal, a passionate web developer
+        who enjoys building interactive and user-friendly websites. With a keen
+        eye for design and a love for problem-solving, I strive to create
+        memorable online experiences through my work.
         </div>
       </div>
       <div className="right">
@@ -75,7 +76,7 @@ const About = () => {
             return (
               <div
                 key={i}
-                className="border-[1px] hover:scale-105 duration-700 delay-75 gap-2 transition-all border-white h-36 flex flex-col items-center justify-center w-full lg:w-56">
+                className={`border-[1px] hover:scale-105 duration-700 delay-75 gap-2 transition-all ${color===true? "border-white":"border-gray-700"} h-36 flex flex-col items-center justify-center w-full lg:w-56`}>
                 <div className="text-green-500 text-2xl md:text-3xl font-bold hover:scale-110 duration-700 delay-75 transition-all ">
                   {val.project}
                 </div>
