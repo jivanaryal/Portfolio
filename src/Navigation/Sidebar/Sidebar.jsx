@@ -50,7 +50,7 @@ const Sidebar = () => {
   
   return (
     <div className="relative">
-      <div><AiOutlineMenu className={`lg:hidden block text-3xl absolute top-2 right-[-4rem] `}  onClick={()=>{
+      <div><AiOutlineMenu className={`lg:hidden block text-3xl absolute top-2 right-[-2rem] `}  onClick={()=>{
       console.log(show)
       setShow(!show);
     }}/></div>
