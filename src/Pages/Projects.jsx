@@ -62,7 +62,7 @@ const Projects = () => {
     </div>
   
     <Link to="https://github.com/jivanaryal">
-      <div className="flex justify-center gap-2 mt-20 text-4xl md:text-6xl underline pb-32">
+      <div className="flex justify-center gap-2 mt-20 text-4xl md:text-6xl underline ">
         <div className="">More</div>
         <div className="text-green-700">Projects</div>
       </div>

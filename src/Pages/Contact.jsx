@@ -107,7 +107,7 @@ const Contact = () => {
       {logos.map((val, i) => {
         return (
           <Link to={val.path}>
-            <div className={`border-2 rounded-full p-3 bg-white shadow-2xl border-transparent text-2xl ${color ? "bg-[#171a24]" : ""}`}>
+            <div className={`border-2 rounded-full p-3 bg-white shadow-2xl border-transparent text-2xl ${color ? "bg-[#171a24]" : "bg-white"}`}>
               {val.logo}
             </div>
           </Link>

@@ -6,17 +6,22 @@ export const ColorContext = createContext();
 
 const Layout = () => {
   const [color, setColor] = useState(true);
+  const [show,setShow] = useState(true);
   return (
-    <ColorContext.Provider value={{ color, setColor }}>
-    <div className={` grid grid-cols-12 transition-all delay-100 duration-700  ${color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"}`}>
-    <div className="lg:col-span-10 col-span-12 min-h-screen w-11/12 mx-auto">
-        <Outlet />
+    <ColorContext.Provider value={{ color, setColor,show,setShow }}>
+      <div
+        className={` grid grid-cols-12 transition-all delay-100 duration-700  ${
+          color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"
+        }`}
+      >
+        <div className="lg:col-span-10 mt-20 col-span-12 min-h-screen w-11/12 mx-auto">
+          <Outlet />
+        </div>
+        <div className={` h-screen fixed right-0 top-0 px-20 ${show===false?"shadow-xl":"shadow-none"}`}>
+          <Sidebar />
+        </div>
       </div>
-      <div className="lg:shadow-xl h-screen fixed right-0 top-0 px-20">
-        <Sidebar />
-      </div>
-    </div>
-  </ColorContext.Provider>
+    </ColorContext.Provider>
   );
 };
 
