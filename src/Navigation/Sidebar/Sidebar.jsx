@@ -33,59 +33,62 @@ const data = [
 ];
 
 const Sidebar = () => {
-  const { color, setColor,show,setShow } = useContext(ColorContext);
+  const { color, setColor, show, setShow } = useContext(ColorContext);
   const location = useLocation();
 
-  console.log(color)
+  console.log(color);
 
-  const handleClick = ()=>{
-      setShow(!show)
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth', // Scroll smoothly instead of instantly
-      });
-  }
+  const handleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Scroll smoothly instead of instantly
+    });
+  };
 
-
-  
   return (
     <div className="relative">
-      <div><AiOutlineMenu className={`lg:hidden block text-3xl absolute top-2 right-[-2rem] `}  onClick={()=>{
-      console.log(show)
-      setShow(!show);
-    }}/></div>
-     <button
+      <div>
+        <AiOutlineMenu
+          className={`lg:hidden block text-3xl absolute top-2 right-[-2rem] `}
+          onClick={() => {
+            console.log(show);
+            setShow(!show);
+          }}
+        />
+      </div>
+      <button
         onClick={() => {
           console.log(color);
           setColor(!color);
         }}
         className={`border-2  fixed  top-1  left-1   rounded-full  p-2  ${
           color === true && "bg-[#454e56]"
-        } border-transparent transition-all delay-100 duration-700`}>
+        } border-transparent transition-all delay-100 duration-700`}
+      >
         <VscColorMode className="text-2xl " />
       </button>
-    <div className={`  ${show===true?'block':'hidden'}`}>
-    <div className="h-[70vh] flex justify-center  flex-col  ">
-     
-      <div className="flex flex-col w-full justify-center items-center gap-5">
-        {data.map((value, i) => {
-          return (
-            <div
-              key={i}
-              className={`text-xl border-2 rounded-full p-2 text-gray-500 ${
-                location.pathname === value.path &&
-                "bg-green-600 text-[#ffffff]"
-              }`}>
-              <Link to={value.path}>
-                {" "}
-                <div onClick={()=>handleClick()}>{value.images}</div>
-              </Link>
-            </div>
-          );
-        })}
+      <div className={`  ${show === true ? "block" : "hidden"}`}>
+        <div className="h-[70vh] flex justify-center  flex-col  ">
+          <div className="flex flex-col w-full justify-center items-center gap-5">
+            {data.map((value, i) => {
+              return (
+                <div
+                  key={i}
+                  className={`text-xl border-2 rounded-full p-2 text-gray-500 ${
+                    location.pathname === value.path &&
+                    "bg-green-600 text-[#ffffff]"
+                  }`}
+                >
+                  <Link to={value.path}>
+                    {" "}
+                    <div onClick={() => handleClick()}>{value.images}</div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   );
 };
