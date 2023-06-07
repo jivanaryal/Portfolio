@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { AiFillHome, AiOutlineMenu } from "react-icons/ai";
 import { FiCreditCard } from "react-icons/fi";
 import { RiProjectorFill } from "react-icons/ri";
