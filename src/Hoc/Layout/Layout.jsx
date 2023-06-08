@@ -1,12 +1,15 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import Sidebar from "../../Navigation/Sidebar/Sidebar";
 
 export const ColorContext = createContext();
 
 const Layout = () => {
+  const isMediumScreen = useMediaQuery({ query: "(max-width: 768px)" });
   const [color, setColor] = useState(true);
   const [show, setShow] = useState(true);
+  const [initialLoad, setInitialLoad] = useState(true);
   // const [mdshow,setMdShow] = useState(false)
 
   const handleClick = () => {
@@ -16,6 +19,12 @@ const Layout = () => {
       setShow(false);
     }
   };
+  useEffect(() => {
+    if (initialLoad) {
+      setShow(!isMediumScreen);
+      setInitialLoad(false);
+    }
+  }, [initialLoad, isMediumScreen]);
   return (
     <ColorContext.Provider value={{ color, setColor, show, setShow }}>
       <div
