@@ -7,6 +7,15 @@ export const ColorContext = createContext();
 const Layout = () => {
   const [color, setColor] = useState(true);
   const [show, setShow] = useState(true);
+  // const [mdshow,setMdShow] = useState(false)
+
+  const handleClick = () => {
+    const screenWidth = window.innerWidth;
+    console.log(screenWidth);
+    if (screenWidth <= 1024) {
+      setShow(false);
+    }
+  };
   return (
     <ColorContext.Provider value={{ color, setColor, show, setShow }}>
       <div
@@ -14,7 +23,10 @@ const Layout = () => {
           color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"
         }`}
       >
-        <div className=" mt-10 col-span-12 min-h-screen w-9/12 mx-auto">
+        <div
+          className=" mt-10 col-span-12 min-h-screen w-10/12 mx-auto"
+          onClick={() => handleClick()}
+        >
           <Outlet />
         </div>
         <div

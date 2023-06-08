@@ -30,7 +30,7 @@ const data = [
 
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pb-10">
       <div className="flex flex-col items-center mt-10 md:mt-20">
         <h1 className="text-4xl md:text-6xl">
           My <span className="text-green-700">Projects</span>
@@ -42,20 +42,20 @@ const Projects = () => {
           return (
             <div
               key={i}
-              className="hover:scale-110  duration-700 delay-75 transition-all w-full lg:w-[20rem] md:[18rem] shadow-2xl pt-2 border-2"
+              className="hover:scale-105  duration-700 delay-75 transition-all w-full md:mx-0 mx-3  lg:w-[21rem] md:w-[19rem] shadow-2xl pt-2 border-2"
             >
               <div>
                 <img
                   src={val.img}
                   alt=""
-                  className="w-full lg:w-[20rem] md:[16rem] rounded-t-lg p-2 h-64"
+                  className="w-full lg:w-[21rem] md:[16rem] rounded-t-lg p-2 h-64"
                 />
               </div>
               <div className="pl-2 pr-2 w-full">
                 <div className="border-b-2 py-4 text-md line-clamp-5 h-36">
                   {val.title}
                 </div>
-                <div className="flex justify-between p-4">
+                <div className="flex justify-between p-3">
                   <div className="capitalize text-lg">{val.author}</div>
                   <Link to={val.job}>
                     <div className="text-mainColor underline text-xl">
