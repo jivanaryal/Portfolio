@@ -71,7 +71,7 @@ const logos = [
 ];
 const Contact = () => {
   return (
-    <div className="mx-auto w-11/12 pb-10">
+    <div className="mx-auto pb-10 w-11/12 min-h-screen ">
       <div className="flex flex-col items-center mt-10 md:mt-20">
         <h1 className="text-4xl md:text-6xl pb-10">
           Contact <span className="text-green-700">Me</span>

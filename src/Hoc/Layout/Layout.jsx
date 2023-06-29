@@ -29,7 +29,7 @@ const Layout = () => {
     <ColorContext.Provider value={{ color, setColor, show, setShow }}>
       <div
         className={` grid grid-cols-12 transition-all delay-100 duration-700  ${
-          color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"
+          color ? "bg-[#191d2b] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#040914]"
         }`}
       >
         <div
