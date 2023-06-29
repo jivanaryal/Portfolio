@@ -29,7 +29,7 @@ const Layout = () => {
     <ColorContext.Provider value={{ color, setColor, show, setShow }}>
       <div
         className={` grid grid-cols-12 transition-all delay-100 duration-700  ${
-          color ? "bg-[#191d2b] text-[#FFFFFF]" : "bg-[#FFFFFF] text-[#040914]"
+          color ? "bg-[#191d2b] text-white" : "bg-[#fff] text-black"
         }`}
       >
         <div
@@ -39,9 +39,9 @@ const Layout = () => {
           <Outlet />
         </div>
         <div
-          className={`col-span-2 transition-all delay-100 duration-700 h-screen fixed right-0 top-0 px-10 ${
-            color ? "bg-[#191D2B]" : "bg-[#ffffff]"
-          } ${show === false ? "shadow-none" : "shadow-xl"}`}
+          className={`col-span-2 h-screen fixed right-0 top-0 px-10 ${
+            show === false ? "shadow-none" : "shadow-xl"
+          }`}
         >
           <Sidebar />
         </div>

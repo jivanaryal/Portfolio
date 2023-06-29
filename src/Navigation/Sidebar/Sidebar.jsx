@@ -46,7 +46,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div>
         <AiOutlineMenu
           className={`lg:hidden block text-3xl absolute top-2 right-[-2rem] `}
@@ -63,7 +63,7 @@ const Sidebar = () => {
         }}
         className={`border-2  fixed  top-1  left-1   rounded-full  p-2  ${
           color === true && "bg-[#454e56]"
-        } border-transparent transition-all delay-100 duration-700`}
+        } border-transparent transition-all  delay-100 duration-700`}
       >
         <VscColorMode className="text-2xl " />
       </button>
