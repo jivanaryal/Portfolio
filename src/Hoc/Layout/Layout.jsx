@@ -39,9 +39,9 @@ const Layout = () => {
           <Outlet />
         </div>
         <div
-          className={`col-span-2 h-screen fixed right-0 top-0 px-10 ${
-            show === false ? "shadow-none" : "shadow-xl"
-          }`}
+          className={`col-span-2 transition-all delay-100 duration-700 h-screen fixed right-0 top-0 px-10 ${
+            color ? "bg-[#000000]" : "bg-[#ffffff]"
+          } ${show === false ? "shadow-none" : "shadow-xl"}`}
         >
           <Sidebar />
         </div>
