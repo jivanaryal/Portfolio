@@ -31,3 +31,9 @@ body::-webkit-scrollbar {
 .information::-webkit-scrollbar {
   width: 20px;
 } */
+
+
+.blur {
+  /* The blur value determines the strength of the blur effect */
+  backdrop-filter: blur(5px);
+}

@@ -12,7 +12,7 @@ const HomePage = () => {
           <img
             src={jivan}
             alt=""
-            className="h-full lg:px-0 lg:w-[30evw]  md:w-[25vw] w-full rounded-lg shadow-xl"
+            className="h-full lg:px-0 lg:w-[30vw] md:w-[25vw] w-full rounded-lg shadow-xl blur"
           />
         </div>
         <div className="text-xl">
