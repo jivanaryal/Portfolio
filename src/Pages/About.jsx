@@ -55,12 +55,12 @@ const About = () => {
   const { color } = useContext(ColorContext);
   return (
     <div className="w-10/12 mx-auto min-h-screen ">
-      <div className="flex pb-10 justify-center gap-2 mt-10 md:mt-20 text-4xl md:text-6xl">
+      <div className="flex pb-10 justify-center gap-2 mt-20 md:mt-20 text-4xl md:text-6xl">
         <div className="">About</div>
         <div className="text-green-700">Me</div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mt-4">
         <div className="flex flex-col gap-3">
           <div className="text-2xl md:text-3xl capitalize">
             Information About Me
