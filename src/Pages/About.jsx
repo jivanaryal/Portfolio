@@ -11,11 +11,11 @@ const data = [
     title: "Years of Experience",
   },
   {
-    project: "5",
+    project: "null",
     title: "Happy Clients",
   },
   {
-    project: "0",
+    project: "null",
     title: "Customers Review",
   },
 ];
@@ -54,8 +54,8 @@ const obj = [
 const About = () => {
   const { color } = useContext(ColorContext);
   return (
-    <div className="w-11/12 mx-auto min-h-screen ">
-      <div className="flex justify-center gap-2 mt-10 md:mt-20 text-4xl md:text-6xl">
+    <div className="w-10/12 mx-auto min-h-screen ">
+      <div className="flex pb-10 justify-center gap-2 mt-10 md:mt-20 text-4xl md:text-6xl">
         <div className="">About</div>
         <div className="text-green-700">Me</div>
       </div>

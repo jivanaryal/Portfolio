@@ -8,16 +8,16 @@ const HomePage = () => {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2    place-content-center  min-h-screen">
-        <div className="justify-center items-center flex">
+        <div className="justify-center items-center flex mt-14">
           <img
             src={jivan}
             alt=""
-            className="h-full lg:px-0 lg:w-[30vw] md:w-[25vw] w-full rounded-lg shadow-xl blur"
+            className="h-full  lg:px-0 lg:w-[30vw] md:w-[25vw] w-full rounded-lg shadow-xl blur"
           />
         </div>
         <div className="text-xl">
           <div className="text-center">
-            <h1 className="text-green-700 mb-4 text-4xl md:text-6xl font-bold">
+            <h1 className="text-green-700 mb-4 text-4xl md:text-6xl mt-6 font-bold">
               Jivan Aryal
             </h1>
             <h1 className="text-4xl md:text-6xl font-bold text-blue-700">
